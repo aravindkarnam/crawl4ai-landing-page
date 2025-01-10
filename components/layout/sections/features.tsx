@@ -10,41 +10,41 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "FileCheck2",
+    title: "Markdown Generation",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Creates smart, concise Markdown optimized for RAG and fine-tuning applications.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "Pickaxe",
+    title: "Structured Data Extraction",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Supports all LLMs. Heuristic algorithms for intelligent extraction for simple applications to avoid reliance on costly LLMs.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "Globe",
+    title: "Browser Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Remote Browser Control. Session management. Support for proxies.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Waypoints",
+    title: "Crawler & Scraper",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Smart website traversal for comprehensive nested page extraction.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "Shield",
+    title: "Stealth mode",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Avoid bot detection by mimicking real users.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "ShipWheel",
+    title: "Playground",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
-  },
+      "Web UI for testing, comparing strategies with AI assistance.",
+  }
 ];
 
 export const FeaturesSection = () => {
@@ -55,13 +55,11 @@ export const FeaturesSection = () => {
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
+        Free and open-source. Now and forever!
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        No hidden features, No strings attached 😉.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

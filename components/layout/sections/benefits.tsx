@@ -10,28 +10,28 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: "Zap",
+    title: "Blazing Fast",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Delivers results 6x faster with real-time, cost-efficient performance.",
   },
   {
-    icon: "LineChart",
-    title: "More Leads",
+    icon: "Bird",
+    title: "Open Source & Deployable",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Fully open-source with no API keys—ready for Docker and cloud integration.",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: "HandHeart",
+    title: "Thriving Community",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Actively maintained by a vibrant community!",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: "Bot",
+    title: "Built for AI & LLMs",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "AI-ready web crawling tailored for LLMs, AI agents, and data pipelines.",
   },
 ];
 
@@ -40,15 +40,14 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+          <h2 className="text-lg text-primary mb-2 tracking-wider">Why Crawl4AI?</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+          Open-source LLM Friendly Web Crawler & Scraper.
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            We ship new features and bug fixes every two weeks with collaborations from a thriving community. Our roadmap is public. Help and support is available 
+            right at your fingertips through forums and our discord community!
           </p>
         </div>
 

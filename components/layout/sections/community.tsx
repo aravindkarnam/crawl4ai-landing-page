@@ -13,15 +13,15 @@ export const CommunitySection = () => {
     <section id="community" className="py-12 ">
       <hr className="border-secondary" />
       <div className="container py-20 sm:py-20">
-        <div className="lg:w-[60%] mx-auto">
+        <div className="lg:w-[70%] mx-auto">
           <Card className="bg-background border-none shadow-none text-center flex flex-col items-center justify-center">
             <CardHeader>
               <CardTitle className="text-4xl md:text-5xl font-bold flex flex-col items-center">
                 <DiscordIcon />
                 <div>
-                  Ready to join this
+                  Ready to join
                   <span className="text-transparent pl-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                    Community?
+                    Crawl4AI Community?
                   </span>
                 </div>
               </CardTitle>

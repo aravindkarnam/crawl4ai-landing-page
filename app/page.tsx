@@ -12,27 +12,27 @@ import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "Shadcn - Landing template",
-  description: "Free Shadcn landing page for developers",
+  title: "Crawl4AI - Open source, high performant crawler for AI-ready data extraction",
+  description: "GitHub's #1 trending crawler that delivers structured AI-ready data. Runs anywhere, Scales everywhere - All features free and open source",
   openGraph: {
     type: "website",
-    url: "https://github.com/nobruf/shadcn-landing-page.git",
-    title: "Shadcn - Landing template",
-    description: "Free Shadcn landing page for developers",
+    url: "https://crawl4ai.com",
+    title: "Crawl4AI - Open source, high performant crawler for AI-ready data extraction",
+    description: "GitHub's #1 trending crawler that delivers structured AI-ready data. Runs anywhere, Scales everywhere - All features free and open source",
     images: [
       {
         url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
         width: 1200,
         height: 630,
-        alt: "Shadcn - Landing template",
+        alt: "Crawl4AI - Open source, high performant crawler for AI-ready data extraction",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "https://github.com/nobruf/shadcn-landing-page.git",
-    title: "Shadcn - Landing template",
-    description: "Free Shadcn landing page for developers",
+    title: "Crawl4AI - Open source, high performant crawler for AI-ready data extraction",
+    description: "GitHub's #1 trending crawler that delivers structured AI-ready data. Runs anywhere, Scales everywhere - All features free and open source",
     images: [
       "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
     ],
@@ -44,15 +44,15 @@ export default function Home() {
     <>
       <HeroSection />
       <SponsorsSection />
-      <BenefitsSection />
       <FeaturesSection />
-      <ServicesSection />
+      <BenefitsSection />
+      {/* <ServicesSection /> */}
       <TestimonialSection />
-      <TeamSection />
       <CommunitySection />
       <PricingSection />
       <ContactSection />
       <FAQSection />
+      <TeamSection />
       <FooterSection />
     </>
   );
