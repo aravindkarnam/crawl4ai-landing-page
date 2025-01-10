@@ -18,6 +18,13 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import Link from "next/link";
@@ -142,6 +149,117 @@ const developerList: DeveloperProps[] = [
   }
 ];
 
+const FeatureNav = () => {
+  return <div className="grid grid-cols-2 gap-4 w-[1000px] p-4">
+    <ul className="col-span-2 grid grid-cols-2 gap-4">
+      {featureList.map(({ title, description, icon: Icon, badge }) => (
+        <li key={title}>
+          <NavigationMenuLink asChild>
+            <a className="rounded-md p-3 text-sm flex flex-row group hover:cursor-pointer">
+              <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
+                <Icon className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col w-5/6">
+                <div className="flex flex-row items-center justify-between">
+                  <p className="mb-1 font-semibold leading-none text-foreground text-sm flex flex-row justify-center items-center">
+                    {title}
+                    <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
+                  </p>
+                  {badge && (
+                    <Badge variant="secondary" className="text-sm font-normal mb-1">
+                      {badge}
+                    </Badge>
+                  )}
+                </div>
+                <p className="line-clamp-2 text-muted-foreground text-sm">
+                  {description}
+                </p>
+              </div>
+            </a>
+          </NavigationMenuLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+}
+
+export const ResourceNav = () => {
+  return <div className="flex w-[800px] flex-row p-4">
+    <ul className="flex flex-col w-3/5">
+      <h2 className="p-3 text-base">Developers</h2>
+      {developerList.map(({ title, description, icon: Icon, badge, href }) => (
+        <li
+          key={title}
+        >
+          <NavigationMenuLink asChild>
+            <a className="rounded-md p-3 text-sm flex flex-row group" href={href} target="_blank">
+              <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
+                <Icon className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col w-5/6">
+                <div className="flex flex-row items-center justify-between">
+                  <p className="mb-1 font-semibold leading-none text-foreground flex flex-row justify-center items-center">
+                    {title}
+                    <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
+                  </p>
+                  {badge && <Badge className="text-xs font-normal mb-1">{badge}</Badge>}
+                </div>
+                <p className="line-clamp-3 text-muted-foreground text-sm">
+                  {description}
+                </p>
+              </div>
+            </a>
+          </NavigationMenuLink>
+        </li>
+      ))}
+    </ul>
+    <div className="flex flex-col w-2/5">
+      <div
+        className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
+      >
+        <div className="mb-2 mt-4 text-sm font-medium flex flex-col">
+          <Wrench className="h-6 w-6 mb-2" />
+          Installation
+        </div>
+        <p className="text-sm leading-tight text-muted-foreground mb-2">
+          Crawl4AI offers flexible installation options to suit various use cases
+        </p>
+        <Separator className="mb-4 bg-muted-foreground" decorative />
+        <NavigationMenuLink>
+          <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://pypi.org/project/Crawl4AI/" target="_blank">
+            Using PIP 🐍 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
+          </a>
+        </NavigationMenuLink>
+        <NavigationMenuLink>
+          <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://hub.docker.com/r/unclecode/crawl4ai/tags" target="_blank">
+            Using Docker 🐳 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
+          </a>
+        </NavigationMenuLink>
+        <NavigationMenuLink>
+          <a className="text-sm leading-tight text-muted-foreground flex flex-row group" href="https://colab.research.google.com/drive/1SgRPrByQLzjRfwoRNq1wSGE9nYY_EE8C?usp=sharing" target="_blank">
+            Try this Notebook 📕 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
+          </a>
+        </NavigationMenuLink>
+      </div>
+      <div
+        className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md mt-4"
+      >
+        <Rocket className="h-6 w-6" />
+        <div className="mb-2 mt-4 text-base font-medium">
+          One-Click Deployment
+        </div>
+        <p className="text-sm leading-tight text-muted-foreground mb-2">
+          Deploy your own instance of Crawl4AI with one click
+        </p>
+        <Separator className="mb-4 bg-muted-foreground" decorative />
+        <NavigationMenuLink asChild>
+          <a href="/">Try now</a>
+        </NavigationMenuLink>
+      </div>
+    </div>
+  </div>
+}
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
@@ -162,7 +280,7 @@ export const Navbar = () => {
 
           <SheetContent
             side="left"
-            className="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card border-secondary"
+            className="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card border-secondary min-w-full"
           >
             <div>
               <SheetHeader className="mb-4 ml-4">
@@ -173,7 +291,24 @@ export const Navbar = () => {
                   </Link>
                 </SheetTitle>
               </SheetHeader>
-
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Features</AccordionTrigger>
+                  <AccordionContent>
+                    <NavigationMenu>
+                      <FeatureNav />
+                    </NavigationMenu>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Resources</AccordionTrigger>
+                  <AccordionContent>
+                    <NavigationMenu>
+                      <ResourceNav />
+                    </NavigationMenu>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
 
               <div className="flex flex-col gap-2">
                 {routeList.map(({ href, label }) => (
@@ -206,115 +341,15 @@ export const Navbar = () => {
               Features
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="flex flex-col w-[500px] p-4">
-                <ul className="flex flex-col">
-                  {featureList.map(({ title, description, icon: Icon, badge }) => (
-                    <li
-                      key={title}
-                    >
-                      <NavigationMenuLink asChild>
-                        <a className="rounded-md p-3 text-sm flex flex-row group hover:cursor-pointer">
-                          <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
-                            <Icon className="h-6 w-6" />
-                          </div>
-                          <div className="flex flex-col w-5/6">
-                            <div className="flex flex-row items-center justify-between">
-                              <p className="mb-1 font-semibold leading-none text-foreground text-sm flex flex-row justify-center items-center">
-                                {title}
-                                <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
-                              </p>
-                              {badge && <Badge variant="secondary" className="text-sm font-normal mb-1">{badge}</Badge>}
-                            </div>
-                            <p className="line-clamp-2 text-muted-foreground text-sm">
-                              {description}
-                            </p>
-                          </div>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <FeatureNav />
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-sm hover:text-primary">
-              Developers
+              Resources
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="flex w-[800px] flex-row p-4">
-                <ul className="flex flex-col w-3/5">
-                  {developerList.map(({ title, description, icon: Icon, badge, href }) => (
-                    <li
-                      key={title}
-                    >
-                      <NavigationMenuLink asChild>
-                        <a className="rounded-md p-3 text-sm flex flex-row group" href={href} target="_blank">
-                          <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
-                            <Icon className="h-6 w-6" />
-                          </div>
-                          <div className="flex flex-col w-5/6">
-                            <div className="flex flex-row items-center justify-between">
-                              <p className="mb-1 font-semibold leading-none text-foreground flex flex-row justify-center items-center">
-                                {title}
-                                <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
-                              </p>
-                              {badge && <Badge className="text-xs font-normal mb-1">{badge}</Badge>}
-                            </div>
-                            <p className="line-clamp-3 text-muted-foreground text-sm">
-                              {description}
-                            </p>
-                          </div>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-col w-2/5">
-                  <div
-                    className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
-                  >
-                    <div className="mb-2 mt-4 text-sm font-medium flex flex-col">
-                      <Wrench className="h-6 w-6 mb-2" />
-                      Installation
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground mb-2">
-                      Crawl4AI offers flexible installation options to suit various use cases
-                    </p>
-                    <Separator className="mb-4 bg-muted-foreground" decorative />
-                    <NavigationMenuLink>
-                      <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://pypi.org/project/Crawl4AI/" target="_blank">
-                        Using PIP 🐍 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
-                      </a>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink>
-                      <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://hub.docker.com/r/unclecode/crawl4ai/tags" target="_blank">
-                        Using Docker 🐳 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
-                      </a>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink>
-                      <a className="text-sm leading-tight text-muted-foreground flex flex-row group" href="https://colab.research.google.com/drive/1SgRPrByQLzjRfwoRNq1wSGE9nYY_EE8C?usp=sharing" target="_blank">
-                        Try this Notebook 📕 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
-                      </a>
-                    </NavigationMenuLink>
-                  </div>
-                  <div
-                    className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md mt-4"
-                  >
-                    <Rocket className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-base font-medium">
-                      One-Click Deployment
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground mb-2">
-                      Deploy your own instance of Crawl4AI with one click
-                    </p>
-                    <Separator className="mb-4 bg-muted-foreground" decorative />
-                    <NavigationMenuLink asChild>
-                      <a href="/">Try now</a>
-                    </NavigationMenuLink>
-                  </div>
-                </div>
-              </div>
+              <ResourceNav />
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>

@@ -10,8 +10,8 @@ export const HeroSection = () => {
   const { theme } = useTheme();
   return (
     <section className="container w-full">
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
-        <div className="text-center space-y-8">
+      <div className="flex flex-col items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32 ">
+        <div className="text-center space-y-8 w-full">
           <Badge variant="outline" className="text-sm py-2">
             <span className="mr-2 text-primary">
               <Badge>Try now</Badge>
@@ -19,19 +19,20 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-4xl md:text-6xl font-bold leading-loose">
+          <div className="w-full px-2 text-center text-5xl md:text-6xl font-medium leading-tight">
             <h1>
-              Deploy anywhere in seconds
-              <div className="mt-4">
+              Deploy in seconds
+              <div className="mt-0 md:mt-4">
                 <span className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text">
-                  Crawl without Boundaries
+                  Crawl for AI
                 </span>
+                without Boundaries
               </div>
             </h1>
           </div>
 
           <p className="max-w-screen-md mx-auto text-xl font-light">
-            {`GitHub's #1 trending crawler that delivers structured AI-ready data. Runs anywhere, Scales everywhere - All features free and open source`}
+            {`GitHub's #1 trending crawler that delivers structured AI-ready data from human generated web content. Runs anywhere, Scales fast - All features free and open source`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
@@ -54,10 +55,11 @@ export const HeroSection = () => {
             </Button>
           </div>
         </div>
-
         <div className="relative group mt-14">
           <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/30 rounded-full blur-3xl"></div>
-          <iframe width="1080" height="720" src="https://www.youtube.com/embed/Ex3EpKxlMO0?si=VB0KOevgnAvB33gM" title="YouTube video player"
+          <iframe width="1080" height="720" 
+          src="https://www.youtube.com/embed/Ex3EpKxlMO0?si=VB0KOevgnAvB33gM" 
+          title="Crawl4AI demo"
           className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30" 
            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
