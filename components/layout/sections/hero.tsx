@@ -19,32 +19,32 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-5xl md:text-6xl font-medium leading-tight">
+          <div className="w-full px-2 text-center text-3xl md:text-6xl font-semibold leading-tight">
             <h1>
-              Deploy in seconds
-              <div className="mt-0 md:mt-4">
+              Crawl for AI Limitlessly
+              <div>
                 <span className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text">
-                  Crawl for AI
+                  Deploy in Seconds
                 </span>
-                without Boundaries
               </div>
             </h1>
           </div>
 
-          <p className="max-w-screen-md mx-auto text-xl font-light">
-            {`GitHub's #1 trending crawler that delivers structured AI-ready data from human generated web content. Runs anywhere, Scales fast - All features free and open source`}
+          <p className="max-w-screen-md mx-auto text:xs md:text-xl font-normal">
+            {`GitHub's #1 Trending AI friendly crawler. 
+            Delivers Structured, LLM-ready data from Human generated web content. 
+            Lightning Fast, Runs Anywhere - All features Free and Open-source.`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Start crawling for free
+            <Button className="w-3/4 md:w-1/4 font-bold group/arrow">
+              Start crawling for Free
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
-
             <Button
               asChild
               variant="secondary"
-              className="w-5/6 md:w-1/4 font-bold"
+              className="w-3/4 md:w-1/4 font-bold"
             >
               <Link
                 href="https://github.com/unclecode/crawl4ai"
@@ -54,16 +54,6 @@ export const HeroSection = () => {
               </Link>
             </Button>
           </div>
-        </div>
-        <div className="relative group mt-14">
-          <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/30 rounded-full blur-3xl"></div>
-          <iframe width="1080" height="720" 
-          src="https://www.youtube.com/embed/Ex3EpKxlMO0?si=VB0KOevgnAvB33gM" 
-          title="Crawl4AI demo"
-          className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </div>
       </div>
     </section>
