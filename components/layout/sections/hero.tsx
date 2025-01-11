@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+import WordRotate from "@/components/ui/word-rotate";
 import Link from "next/link";
 
 export const HeroSection = () => {
@@ -19,13 +19,13 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-3xl md:text-6xl font-semibold leading-tight">
+          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading-tight">
             <h1>
               Crawl for AI Limitlessly
               <div>
-                <span className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text">
-                  Deploy in Seconds
-                </span>
+                <WordRotate className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text" 
+                duration={3000}
+                words={["Deployable in Seconds","Bot detection avoidance","Flexible Browser Control","Structured Data Extraction", "Real-time performance", "Runs everywhere!"]}/>
               </div>
             </h1>
           </div>

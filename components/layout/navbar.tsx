@@ -150,12 +150,12 @@ const developerList: DeveloperProps[] = [
 ];
 
 const FeatureNav = () => {
-  return <div className="grid grid-cols-2 gap-4 w-[1000px] p-4">
-    <ul className="col-span-2 grid grid-cols-2 gap-4">
+  return <div className="grid grid-cols-2 gap-4 w-full md:w-[1000px] p-4">
+    <ul className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
       {featureList.map(({ title, description, icon: Icon, badge }) => (
         <li key={title}>
           <NavigationMenuLink asChild>
-            <a className="rounded-md p-3 text-sm flex flex-row group hover:cursor-pointer">
+            <a className="rounded-md p-0 md:p-3 text-sm flex flex-row group hover:cursor-pointer">
               <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
                 <Icon className="h-6 w-6" />
               </div>
@@ -184,8 +184,8 @@ const FeatureNav = () => {
 }
 
 export const ResourceNav = () => {
-  return <div className="flex w-[800px] flex-row p-4">
-    <ul className="flex flex-col w-3/5">
+  return <div className="flex w-full md:w-[800px] flex-row p-4 flex-wrap">
+    <ul className="flex flex-col w-full md:w-3/5">
       <h2 className="p-3 text-base">Developers</h2>
       {developerList.map(({ title, description, icon: Icon, badge, href }) => (
         <li
@@ -213,7 +213,7 @@ export const ResourceNav = () => {
         </li>
       ))}
     </ul>
-    <div className="flex flex-col w-2/5">
+    <div className="flex flex-col w-full md:w-2/5">
       <div
         className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
       >
