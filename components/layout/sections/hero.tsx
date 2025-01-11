@@ -25,7 +25,7 @@ export const HeroSection = () => {
               <div>
                 <WordRotate className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text" 
                 duration={3000}
-                words={["Deployable in Seconds","Bot detection avoidance","Flexible Browser Control","Structured Data Extraction", "Real-time performance", "Runs everywhere!"]}/>
+                words={["Deploy in Seconds","Avoid Detection","Full Browser Control","Extract Structured Data", "Real-time performance", "Runs everywhere!"]}/>
               </div>
             </h1>
           </div>
