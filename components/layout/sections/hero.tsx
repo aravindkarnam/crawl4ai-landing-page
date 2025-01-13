@@ -19,18 +19,18 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading-tight">
+          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading">
             <h1>
               Crawl for AI Limitlessly
               <div>
                 <WordRotate className="text-transparent px-2 bg-gradient-to-r from-[#6366f1] to-primary bg-clip-text" 
                 duration={3000}
-                words={["Extract Structured Data","Stealth mode","Full Browser Control", "Real-time performance", "Run anywhere!", "Deploy in Seconds"]}/>
+                words={["Extract Structured Data","Stealth Mode","Full Browser Control", "Real-time performance", "Run anywhere!", "Deploy in Seconds"]}/>
               </div>
             </h1>
           </div>
 
-          <p className="max-w-screen-md mx-auto text:xs md:text-xl font-normal">
+          <p className="max-w-screen-md mx-auto text-xs md:text-xl font-normal">
             {`GitHub's #1 Trending AI friendly crawler. 
             Delivers Structured, LLM-ready data from Human generated web content. 
             Lightning Fast, Runs Anywhere - All features Free and Open-source.`}
