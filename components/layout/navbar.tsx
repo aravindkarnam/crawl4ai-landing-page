@@ -322,7 +322,7 @@ export const Navbar = () => {
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-sm hover:text-primary">
+            <NavigationMenuTrigger className="bg-card text-sm hover:text-primary p-2">
               Features
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -330,7 +330,7 @@ export const Navbar = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-sm hover:text-primary">
+            <NavigationMenuTrigger className="bg-card text-sm hover:text-primary p-2">
               Developers
             </NavigationMenuTrigger>
             <NavigationMenuContent>

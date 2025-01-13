@@ -30,7 +30,7 @@ export const HeroSection = () => {
             </h1>
           </div>
 
-          <p className="max-w-screen-md mx-auto text-xs md:text-xl font-normal">
+          <p className="max-w-screen-md mx-auto text-xs md:text-lg font-normal">
             {`GitHub's #1 Trending AI friendly crawler. 
             Delivers Structured, LLM-ready data from Human generated web content. 
             Lightning Fast, Runs Anywhere - All features Free and Open-source.`}
