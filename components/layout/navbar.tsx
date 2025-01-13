@@ -105,7 +105,7 @@ const featureList: FeatureProps[] = [
     icon: Waypoints
   },
   {
-    title: "Stealth mode",
+    title: "Stealth Mode",
     description: "Avoid bot detection by mimicking real users.",
     icon: Shield
   },
@@ -150,23 +150,23 @@ const developerList: DeveloperProps[] = [
 ];
 
 const FeatureNav = () => {
-  return <div className="grid grid-cols-2 gap-4 w-full md:w-[1000px] p-4">
-    <ul className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+  return <div className="grid grid-cols-2 gap-4 w-full lg:w-[1000px] p-4">
+    <ul className="col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-4">
       {featureList.map(({ title, description, icon: Icon, badge }) => (
         <li key={title}>
           <NavigationMenuLink asChild>
             <a className="rounded-md p-0 md:p-3 text-sm flex flex-row group hover:cursor-pointer">
-              <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
+              <div className="flex w-[15%] aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
                 <Icon className="h-6 w-6" />
               </div>
-              <div className="flex flex-col w-5/6">
+              <div className="flex flex-col w-[90%]">
                 <div className="flex flex-row items-center justify-between">
                   <p className="mb-1 font-semibold leading-none text-foreground text-sm flex flex-row justify-center items-center">
                     {title}
                     <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
                   </p>
                   {badge && (
-                    <Badge variant="secondary" className="text-sm font-normal mb-1">
+                    <Badge variant="secondary" className="text-xs font-light mb-1">
                       {badge}
                     </Badge>
                   )}
@@ -186,17 +186,17 @@ const FeatureNav = () => {
 export const ResourceNav = () => {
   return <div className="flex w-full md:w-[800px] flex-row p-4 flex-wrap">
     <ul className="flex flex-col w-full md:w-3/5">
-      <h2 className="p-3 text-base">Developers</h2>
+      <h2 className="p-3 text-base">Resources</h2>
       {developerList.map(({ title, description, icon: Icon, badge, href }) => (
         <li
           key={title}
         >
           <NavigationMenuLink asChild>
             <a className="rounded-md p-3 text-sm flex flex-row group" href={href} target="_blank">
-              <div className="flex w-1/6 aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
+              <div className="flex w-[10%] aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
                 <Icon className="h-6 w-6" />
               </div>
-              <div className="flex flex-col w-5/6">
+              <div className="flex flex-col w-[90%]">
                 <div className="flex flex-row items-center justify-between">
                   <p className="mb-1 font-semibold leading-none text-foreground flex flex-row justify-center items-center">
                     {title}
@@ -204,7 +204,7 @@ export const ResourceNav = () => {
                   </p>
                   {badge && <Badge className="text-xs font-normal mb-1">{badge}</Badge>}
                 </div>
-                <p className="line-clamp-3 text-muted-foreground text-sm">
+                <p className="line-clamp-2 text-muted-foreground text-sm">
                   {description}
                 </p>
               </div>
@@ -215,7 +215,7 @@ export const ResourceNav = () => {
     </ul>
     <div className="flex flex-col w-full md:w-2/5">
       <div
-        className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
+        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
       >
         <div className="mb-2 mt-4 text-sm font-medium flex flex-col">
           <Wrench className="h-6 w-6 mb-2" />
@@ -239,21 +239,6 @@ export const ResourceNav = () => {
           <a className="text-sm leading-tight text-muted-foreground flex flex-row group" href="https://colab.research.google.com/drive/1SgRPrByQLzjRfwoRNq1wSGE9nYY_EE8C?usp=sharing" target="_blank">
             Try this Notebook 📕 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
           </a>
-        </NavigationMenuLink>
-      </div>
-      <div
-        className="flex h-1/2 w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md mt-4"
-      >
-        <Rocket className="h-6 w-6" />
-        <div className="mb-2 mt-4 text-base font-medium">
-          One-Click Deployment
-        </div>
-        <p className="text-sm leading-tight text-muted-foreground mb-2">
-          Deploy your own instance of Crawl4AI with one click
-        </p>
-        <Separator className="mb-4 bg-muted-foreground" decorative />
-        <NavigationMenuLink asChild>
-          <a href="/">Try now</a>
         </NavigationMenuLink>
       </div>
     </div>
@@ -301,7 +286,7 @@ export const Navbar = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>Resources</AccordionTrigger>
+                  <AccordionTrigger>Developers</AccordionTrigger>
                   <AccordionContent>
                     <NavigationMenu>
                       <ResourceNav />
@@ -346,7 +331,7 @@ export const Navbar = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-sm hover:text-primary">
-              Resources
+              Developers
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ResourceNav />
