@@ -68,11 +68,11 @@ const routeList: RouteProps[] = [
     label: "Docs",
     newTab: true
   },
-  {
-    href: "/#pricing",
-    label: "Pricing",
-    newTab: false
-  },
+  // {
+  //   href: "/#pricing",
+  //   label: "Pricing",
+  //   newTab: false
+  // },
   {
     href: "https://opencollective.com/",
     label: "Sponsor",
