@@ -21,6 +21,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        dank: ['Dank Mono', 'monospace']
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

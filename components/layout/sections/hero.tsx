@@ -19,7 +19,7 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading">
+          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading-snug">
             <h1>
               Crawl for AI Limitlessly
               <div>

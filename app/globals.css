@@ -1,13 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('/fonts/dmvendor.css');
 
 html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Dank Mono';
+  src: url('/fonts/DankMono-Regular.woff2') format('woff2'),
+       url('/fonts/DankMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* If you have the italic version */
+@font-face {
+  font-family: 'Dank Mono';
+  src: url('/fonts/DankMono-Italic.woff2') format('woff2'),
+       url('/fonts/DankMono-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
 @layer base {
   :root {
+    --global-font-size: 16px;
+    --global-code-font-size: 16px;
+    --global-line-height: 1.5em;
+    --global-space: 10px;
+    --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+        Courier New, monospace, serif;
+    --font-stack: dm, Monaco, Courier New, monospace, serif;
+
     --background: 0 0% 100%;
     --foreground: 292 10% 10%;
 
@@ -83,5 +113,9 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-stack);
+    font-size: var(--global-font-size);
+    line-height: var(--global-line-height);
+
   }
 }
