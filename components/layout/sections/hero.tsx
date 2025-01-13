@@ -19,7 +19,7 @@ export const HeroSection = () => {
             <span>One click deployment</span>
           </Badge>
 
-          <div className="w-full px-2 text-center text-3xl md:text-6xl font-normal leading-snug">
+          <div className="w-full px-2 text-center text-3xl md:text-6xl font-bold leading-snug">
             <h1>
               Crawl for AI Limitlessly
               <div>
@@ -30,7 +30,7 @@ export const HeroSection = () => {
             </h1>
           </div>
 
-          <p className="max-w-screen-md mx-auto text-xs md:text-lg font-normal">
+          <p className="max-w-screen-md mx-auto text-sm md:text-lg font-normal">
             {`GitHub's #1 Trending AI friendly crawler. 
             Delivers Structured, LLM-ready data from Human generated web content. 
             Lightning Fast, Runs Anywhere - All features Free and Open-source.`}

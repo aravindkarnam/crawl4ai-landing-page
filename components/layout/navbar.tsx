@@ -161,7 +161,7 @@ const FeatureNav = () => {
               </div>
               <div className="flex flex-col w-[90%]">
                 <div className="flex flex-row items-center justify-between">
-                  <p className="mb-1 font-semibold leading-none text-foreground text-sm flex flex-row justify-center items-center">
+                  <p className="mb-1 font-semibold leading-none text-foreground text-lg flex flex-row justify-center items-center">
                     {title}
                     <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
                   </p>
@@ -192,13 +192,13 @@ export const ResourceNav = () => {
           key={title}
         >
           <NavigationMenuLink asChild>
-            <a className="rounded-md p-3 text-sm flex flex-row group" href={href} target="_blank">
+            <a className="rounded-md p-3 flex flex-row group" href={href} target="_blank">
               <div className="flex w-[10%] aspect-square mr-4 items-center justify-center rounded-lg bg-secondary">
                 <Icon className="h-6 w-6" />
               </div>
               <div className="flex flex-col w-[90%]">
                 <div className="flex flex-row items-center justify-between">
-                  <p className="mb-1 font-semibold leading-none text-foreground flex flex-row justify-center items-center">
+                  <p className="mb-1 font-semibold leading-none  text-lg text-foreground flex flex-row justify-center items-center">
                     {title}
                     <ChevronDown className="h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-90" />
                   </p>
@@ -217,7 +217,7 @@ export const ResourceNav = () => {
       <div
         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-8 no-underline outline-none focus:shadow-md"
       >
-        <div className="mb-2 mt-4 text-sm font-medium flex flex-col">
+        <div className="mb-2 mt-4 text-lg font-medium flex flex-col">
           <Wrench className="h-6 w-6 mb-2" />
           Installation
         </div>
@@ -226,17 +226,17 @@ export const ResourceNav = () => {
         </p>
         <Separator className="mb-4 bg-muted-foreground" decorative />
         <NavigationMenuLink>
-          <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://pypi.org/project/Crawl4AI/" target="_blank">
+          <a className="text-sm leading-tight text-foreground flex flex-row mb-2 group" href="https://pypi.org/project/Crawl4AI/" target="_blank">
             Using PIP 🐍 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
           </a>
         </NavigationMenuLink>
         <NavigationMenuLink>
-          <a className="text-sm leading-tight text-muted-foreground flex flex-row mb-2 group" href="https://hub.docker.com/r/unclecode/crawl4ai/tags" target="_blank">
+          <a className="text-sm leading-tight text-foreground flex flex-row mb-2 group" href="https://hub.docker.com/r/unclecode/crawl4ai/tags" target="_blank">
             Using Docker 🐳 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
           </a>
         </NavigationMenuLink>
         <NavigationMenuLink>
-          <a className="text-sm leading-tight text-muted-foreground flex flex-row group" href="https://colab.research.google.com/drive/1SgRPrByQLzjRfwoRNq1wSGE9nYY_EE8C?usp=sharing" target="_blank">
+          <a className="text-sm leading-tight text-foreground flex flex-row group" href="https://colab.research.google.com/drive/1SgRPrByQLzjRfwoRNq1wSGE9nYY_EE8C?usp=sharing" target="_blank">
             Try this Notebook 📕 <ExternalLink className="h-4 w-4 ml-2 hidden group-hover:inline" />
           </a>
         </NavigationMenuLink>
